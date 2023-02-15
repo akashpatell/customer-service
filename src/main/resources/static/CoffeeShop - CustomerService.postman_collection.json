@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "cd884965-9920-4502-a3ba-11d36c506f2f",
+		"name": "CoffeeShop - CustomerService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CoffeeShop APIs",
+			"item": [
+				{
+					"name": "Get Coffee Shops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/coffeeshops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffeeshops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Coffee Shops",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/coffeeshops",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"coffeeshops"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Feb 2023 18:01:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"1e764b4a-a771-11ed-afa1-0242ac120002\",\n        \"shopName\": \"Swiss Cafe\",\n        \"shopAddress\": \"Surat\",\n        \"zipCode\": 395001,\n        \"menuItems\": [\n            {\n                \"itemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120002\",\n                \"foodName\": \"Chocolate Coffee\",\n                \"price\": 250\n            },\n            {\n                \"itemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120003\",\n                \"foodName\": \"Black Coffee\",\n                \"price\": 350\n            },\n            {\n                \"itemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120004\",\n                \"foodName\": \"Plane Coffee\",\n                \"price\": 200\n            }\n        ]\n    },\n    {\n        \"id\": \"2e764b4a-a771-11ed-afa1-0242ac120002\",\n        \"shopName\": \"Chocolate Room Cafe\",\n        \"shopAddress\": \"Ahmedabad\",\n        \"zipCode\": 295002,\n        \"menuItems\": [\n            {\n                \"itemId\": \"bb4d8fec-a771-11ed-afa1-0242ac120005\",\n                \"foodName\": \"Latte\",\n                \"price\": 400\n            },\n            {\n                \"itemId\": \"bb4d8fec-a771-11ed-afa1-0242ac120006\",\n                \"foodName\": \"Espresso\",\n                \"price\": 450\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer APIs",
+			"item": [
+				{
+					"name": "Get Order Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customers/83a1aee2-a771-11ed-afa1-0242ac120002/ordersummary/d6195108-424b-4374-b79c-f281015cc2a4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"83a1aee2-a771-11ed-afa1-0242ac120002",
+								"ordersummary",
+								"d6195108-424b-4374-b79c-f281015cc2a4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Order Summary",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/customers/83a1aee2-a771-11ed-afa1-0242ac120002/ordersummary/d6195108-424b-4374-b79c-f281015cc2a4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customers",
+										"83a1aee2-a771-11ed-afa1-0242ac120002",
+										"ordersummary",
+										"d6195108-424b-4374-b79c-f281015cc2a4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Feb 2023 18:00:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"06388952-439d-4d72-8fd9-f2c2f51e879f\",\n    \"customer\": {\n        \"id\": \"83a1aee2-a771-11ed-afa1-0242ac120002\",\n        \"customerName\": \"Akash\",\n        \"customerContact\": \"123456\",\n        \"customerAddress\": \"Surat\",\n        \"zipCode\": 395001\n    },\n    \"order\": {\n        \"orderId\": \"d6195108-424b-4374-b79c-f281015cc2a4\",\n        \"menuItem\": {\n            \"itemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120002\",\n            \"foodName\": \"Chocolate Coffee\",\n            \"price\": 250\n        },\n        \"quantity\": 2,\n        \"totalPrice\": 500\n    },\n    \"status\": \"PLACED\",\n    \"message\": \"order placed succesfully in coffeshop[1e764b4a-a771-11ed-afa1-0242ac120002]\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shopId\": \"1e764b4a-a771-11ed-afa1-0242ac120002\",\r\n    \"menuItemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120002\",\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/customers/83a1aee2-a771-11ed-afa1-0242ac120002/placeorder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customers",
+								"83a1aee2-a771-11ed-afa1-0242ac120002",
+								"placeorder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Place Order - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"shopId\": \"1e764b4a-a771-11ed-afa1-0242ac120002\",\r\n    \"menuItemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120002\",\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customers/83a1aee2-a771-11ed-afa1-0242ac120002/placeorder",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customers",
+										"83a1aee2-a771-11ed-afa1-0242ac120002",
+										"placeorder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Feb 2023 18:11:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f3811890-8c24-438b-8f5e-3dde44b7e724\",\n    \"customer\": {\n        \"id\": \"83a1aee2-a771-11ed-afa1-0242ac120002\",\n        \"customerName\": \"Akash\",\n        \"customerContact\": \"123456\",\n        \"customerAddress\": \"Surat\",\n        \"zipCode\": 395001\n    },\n    \"order\": {\n        \"orderId\": \"31e28aad-32e1-409c-8884-6b8bff37bc24\",\n        \"menuItem\": {\n            \"itemId\": \"ab4d8fec-a771-11ed-afa1-0242ac120002\",\n            \"foodName\": \"Chocolate Coffee\",\n            \"price\": 250\n        },\n        \"quantity\": 2,\n        \"totalPrice\": 500\n    },\n    \"status\": \"PLACED\",\n    \"message\": \"order placed succesfully in coffeshop[1e764b4a-a771-11ed-afa1-0242ac120002]\"\n}"
+						},
+						{
+							"name": "Place Order - Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customers/83a1aee2-a771-11ed-afa1-0242ac120002/placeorder",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customers",
+										"83a1aee2-a771-11ed-afa1-0242ac120002",
+										"placeorder"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Feb 2023 18:02:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    \"menuItemId must not be blank\",\n    \"shopId must not be blank\"\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
